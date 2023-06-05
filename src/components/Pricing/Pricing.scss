@@ -1,0 +1,119 @@
+$white-color: #fff;
+$black-color: #0c0c0c;
+$colur-blue: #2563EB;
+$breakpoint: 799px;
+
+@mixin price-button-style($bgm: $font-color, $text-color: $nav-background) {
+
+    align-items: center;
+    background-color: $bgm;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: $text-color;
+    cursor: pointer;
+    justify-content: center;
+    width: 80%;
+    min-height: 40px;
+    min-width: 0px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border: 2px solid #e8e8e87c;
+    font-weight: bold;
+}
+
+.pricing-container {
+    background-color: #10172A;
+    color: $white-color;
+}
+
+.pricing-title {
+    color: $white-color;
+    padding-top: 5vh;
+    padding-bottom: 50px;
+
+    .pricing-head {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        margin-block-end: 0;
+    }
+
+    .pricing-sub {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 20px;
+        font-size: small;
+    }
+}
+
+
+.Pricing-list-main {
+    padding-top: 10vh;
+    padding-bottom: 70px;
+
+    .pricing-list {
+
+        .list-column {
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        .pricing-button {
+            text-align: left;
+            align-items: center;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: $white-color;
+            justify-content: center;
+            min-height: 40px;
+            padding-left: 30px;
+
+            &.active {
+                background-color: $colur-blue;
+
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+
+            .price-heading {
+                font-weight: bold;
+            }
+
+            .price-sub {
+                font-size: 11px;
+                width: 70%;
+            }
+
+            .price-button {
+                @include price-button-style($bgm: transparent, $text-color: $white-color);
+            }
+            .price-button-active{
+                @include price-button-style($bgm: $white-color, $text-color: $black-color);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .pricing-list {
+        
+        .list-column {
+            flex-direction: column;
+        }
+        .pricing-button{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

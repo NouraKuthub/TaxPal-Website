@@ -1,0 +1,114 @@
+$breakpoint: 799px;
+
+.backgroundWhite-image {
+    background-image: url(./images/background-white.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.faq-container {
+    padding-top: 10vh;
+    margin-left: 30px;
+
+    .faq-title {
+        font-size: 2.5rem;
+        margin-block-end: 0;
+        font-weight: 600;
+    }
+
+    .faq-title-sub {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .faq-title-sub {
+        display: contents;
+    }
+}
+
+.list-parent {
+    display: flex;
+    flex-wrap: wrap;
+
+    .list {
+        width: 33%;
+
+        .list-flex {
+
+            list-style: none;
+            padding-inline-start: 30px;
+
+            .list-head {
+                font-size: 16px;
+            }
+
+            .list-discription {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .list-parent {
+        flex-direction: column;
+
+        .list {
+            width: 90%;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 90px;
+    }
+}
+
+.footer-bottom {
+    width: 90%;
+    margin: 0 auto;
+
+    .line {
+        width: 100%;
+        margin: 0 auto;
+        border: 0;
+        border-top: 2px solid rgba(210, 210, 210, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .copyright{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .copyright{
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+    }
+}
